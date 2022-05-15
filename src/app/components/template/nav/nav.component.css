@@ -1,0 +1,10 @@
+.container{
+    height: 40rem;
+    background-color: gainsboro;
+}
+i {
+    padding-right: .6rem;
+}
+.sidenav{
+    background-color: #808080
+}
