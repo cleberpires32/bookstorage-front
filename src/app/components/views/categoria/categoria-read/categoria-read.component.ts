@@ -2,6 +2,7 @@ import { Categoria } from './../categoria.model';
 import { CategoriaService } from './../categoria.service';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-categoria-read',
   templateUrl: './categoria-read.component.html',
