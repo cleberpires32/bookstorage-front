@@ -1,0 +1,41 @@
+.content{
+    width: 95%;
+    margin: 1.4rem auto auto auto;
+    color: rgb(136, 127, 127);
+}
+.title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.title h1{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.botao {
+margin-bottom: .7rem;
+position: relative;
+text-align:left;
+}
+
+.table{
+    width: 100%;
+}
+
+.table td{
+    text-align: left;
+}
+.livro{
+    color: rgb(63, 149, 189);
+    margin-left: .6rem;
+}
+.edite{
+    color: rgb(201, 143, 102);
+}
+.delete{
+    color: rgb(150, 33, 33);
+    margin-left: 1.0rem;
+}
+.ma_header_acoes{
+    width: 5rem;
+}

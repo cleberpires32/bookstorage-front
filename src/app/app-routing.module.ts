@@ -6,18 +6,19 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
+import { LivrosAllComponent } from './components/views/livros/livros-all/livros-all.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: HomeComponent
   },
   {
-    path:'categorias',
+    path: 'categorias',
     component: CategoriaReadComponent
   },
   {
-    path:'categoria/create',
+    path: 'categoria/create',
     component: CategoriaCreateComponent
   },
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'categorias/update/:id',
     component: CategoriaUpdateComponent
+  },
+  {
+    path: 'categorias/:id_cat/livros',
+    component: LivrosAllComponent
   }
 ];
 
