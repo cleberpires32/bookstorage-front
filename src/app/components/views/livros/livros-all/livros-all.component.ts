@@ -9,23 +9,28 @@ import { LivroService } from '../livro.service';
   styleUrls: ['./livros-all.component.css']
 })
 export class LivrosAllComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'nome_autor', 'titulo', 'texto','acoes']
-  livros: Livro[] =[]
-  id_cat: string=''
+  displayedColumns: string[] = ['id', 'nome_autor', 'titulo', 'texto', 'acoes']
+  livros: Livro[] = []
+  id_cat: string = ''
 
   constructor(
     private service: LivroService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.id_cat = this.route.snapshot.paramMap.get('id_cat')!
     this.findAll()
   }
 
-  findAll(): void{
+  findAll(): void {
     this.service.findByIdPorCategoria(this.id_cat).subscribe(response => {
       this.livros = response
       console.log(this.livros[0])
     })
+  }
+
+  navegarParaCriarLivro(): void { 
+    this.router.navigate([`categorias/${this.id_cat}/livros/create`])
   }
 }

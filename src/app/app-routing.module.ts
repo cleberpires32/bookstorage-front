@@ -1,3 +1,4 @@
+import { LivrosCreateComponent } from './components/views/livros/livros-create/livros-create.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
@@ -7,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { LivrosAllComponent } from './components/views/livros/livros-all/livros-all.component';
+import { LivrosUpdateComponent } from './components/views/livros/livros-update/livros-update.component';
 
 const routes: Routes = [
   {
@@ -32,7 +34,16 @@ const routes: Routes = [
   {
     path: 'categorias/:id_cat/livros',
     component: LivrosAllComponent
+  },
+  {
+    path:'categorias/:id_cat/livros/create',
+    component: LivrosCreateComponent
+  },
+  {
+    path:'categorias/:id_cat/livros/update/:id_li',
+    component: LivrosUpdateComponent
   }
+
 ];
 
 @NgModule({

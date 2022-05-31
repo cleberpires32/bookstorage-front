@@ -1,5 +1,6 @@
 export interface Livro{
-    id?: String,
-    nome_auto: String,
-    texto: String
+    id?: string,
+    nome_autor: string,
+    titulo: string,
+    texto: string
 }
