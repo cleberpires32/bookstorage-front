@@ -26,7 +26,6 @@ export class LivrosAllComponent implements OnInit {
   findAll(): void {
     this.service.findByIdPorCategoria(this.id_cat).subscribe(response => {
       this.livros = response
-      console.log(this.livros[0])
     })
   }
 

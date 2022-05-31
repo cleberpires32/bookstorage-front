@@ -27,7 +27,6 @@ export class CategoriaCreateComponent implements OnInit {
       this.service.message("Categoria criada com sucesso!")
     }, err => {
       this.service.message("Falta implementar validaçoes dos campos!")
-
     })
   }
 
