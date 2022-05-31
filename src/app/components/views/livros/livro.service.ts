@@ -13,7 +13,7 @@ export class LivroService {
 
   baseUrl: string = environment.baseUrl;
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -26,7 +26,7 @@ export class LivroService {
     return this.http.get<Livro[]>(url)
   }
 
-  create(livro: Livro, id_cat: string ): Observable<Livro> {
+  create(livro: Livro, id_cat: string): Observable<Livro> {
     const url = `${this.baseUrl}/livros?categoria=${id_cat}`
     return this.http.post<Livro>(url, livro)
   }
@@ -36,15 +36,20 @@ export class LivroService {
     return this.http.put<Livro>(url, livro)
   }
 
-  findById(id: string): Observable<Livro>{
-   const url = `${this.baseUrl}/livros/${id}`;
-   return this.http.get<Livro>(url);
+  delete(id: string): Observable<void> {
+    const url = `${this.baseUrl}/livros/${id}`;
+    return this.http.delete<void>(url);
+  }
+
+  findById(id: string): Observable<Livro> {
+    const url = `${this.baseUrl}/livros/${id}`;
+    return this.http.get<Livro>(url);
 
   }
 
-  message(str: String){
+  message(str: String) {
 
-    this._snackBar.open(`${str}`,'Ok',{
+    this._snackBar.open(`${str}`, 'Ok', {
       horizontalPosition: 'end',
       verticalPosition: 'top',
       duration: 3000

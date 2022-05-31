@@ -1,6 +1,3 @@
-import { MatInputModule } from '@angular/material/input';
-import { Router } from '@angular/router';
-
 import { environment } from 'src/environments/environment';
 import { Categoria } from './categoria.model';
 import { HttpClient } from '@angular/common/http';
