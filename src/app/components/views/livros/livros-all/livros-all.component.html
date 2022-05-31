@@ -13,7 +13,7 @@
                     <th mat-header-cell *matHeaderCellDef>ID</th>
                     <td mat-cell *matCellDef="let row"> {{ row.id }} </td>
                 </ng-container>
-                'id', 'nome_autor', 'titulo', 'texto','acoes'
+                'id', 'nome_autor', 'titulo', 'acoes'
                 <ng-container matColumnDef="nome_autor">
                     <th mat-header-cell *matHeaderCellDef>NOME AUTOR</th>
                     <td mat-cell *matCellDef="let row">{{row.nome_autor}}</td>
@@ -22,11 +22,14 @@
                     <th mat-header-cell *matHeaderCellDef>TITULO</th>
                     <td mat-cell *matCellDef="let row"> {{ row.titulo }} </td>
                 </ng-container>
-                <ng-container matColumnDef="texto">
-                    <th mat-header-cell *matHeaderCellDef>TEXTO</th>
-                    <td mat-cell *matCellDef="let row"> {{ row.texto }} </td>
+                <ng-container matColumnDef="ler">
+                    <th mat-header-cell *matHeaderCellDef>LER</th>
+                    <td mat-cell *matCellDef="let row"> 
+                        <a routerLink="read/{{row.id}}" class="livro">
+                            <i class="material-icons">book</i>    
+                        </a>
+                    </td>
                 </ng-container>
-
                 <ng-container matColumnDef="acoes">
                     <th class="ma_header_acoes" mat-header-cell *matHeaderCellDef>ACÕES</th>
                     <td mat-cell *matCellDef="let element">

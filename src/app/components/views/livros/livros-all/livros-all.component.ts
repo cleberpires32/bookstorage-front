@@ -9,7 +9,7 @@ import { LivroService } from '../livro.service';
   styleUrls: ['./livros-all.component.css']
 })
 export class LivrosAllComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'nome_autor', 'titulo', 'texto', 'acoes']
+  displayedColumns: string[] = ['id', 'nome_autor', 'titulo', 'ler', 'acoes']
   livros: Livro[] = []
   id_cat: string = ''
 
